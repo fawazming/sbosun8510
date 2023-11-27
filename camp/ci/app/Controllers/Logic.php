@@ -45,7 +45,11 @@ class Logic extends BaseController
 
 	public function vendors()
 	{
-		echo view('vendors');
+        $Vendors = new \App\Models\Vendors();
+        $vendors = $Vendors->find();
+        echo view('header');
+		echo view('vendors',['vendors'=>$vendors]);
+        echo view('footer');
 	}
 
 	public function msg($mg = "Hello")
@@ -101,23 +105,23 @@ class Logic extends BaseController
 		$incoming = $this->request->getPost();
 		$Pins = new \App\Models\Pins();
         $Delegates23 = new \App\Models\Delegates23();
-		$Delegates22 = new \App\Models\Delegates22();
+		// $Delegates22 = new \App\Models\Delegates22();
         if(isset($incoming['lcamp']) && $incoming['lcamp'] == 'on'){
-            $wdata = [
-                'fname' => $incoming['fname'],
-                'lname' => $incoming['lname'],
-                'lb' => $incoming['lb'],
-            ];
-            $res = $Delegates22->where($wdata)->find();
-            if($res){
-                echo view('header');
-                echo view('home2',['udata'=>$res[0],'ref'=>$incoming['ref'], 'catg' =>$incoming['category'] ]);
-                echo view('footer');
-            }else{
-                echo view('header');
-                echo view('home',['ref'=>$incoming['ref'], 'catg' =>$incoming['category']]);
-                echo view('footer');
-            }
+            // $wdata = [
+            //     'fname' => $incoming['fname'],
+            //     'lname' => $incoming['lname'],
+            //     'lb' => $incoming['lb'],
+            // ];
+            // $res = $Delegates22->where($wdata)->find();
+            // if($res){
+            //     echo view('header');
+            //     echo view('home2',['udata'=>$res[0],'ref'=>$incoming['ref'], 'catg' =>$incoming['category'] ]);
+            //     echo view('footer');
+            // }else{
+            //     echo view('header');
+            //     echo view('home',['ref'=>$incoming['ref'], 'catg' =>$incoming['category']]);
+            //     echo view('footer');
+            // }
 
         }else{
             $pin = $Pins->where('pin',$incoming['ref'])->find()[0];
