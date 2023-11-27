@@ -54,35 +54,19 @@ class Stat extends BaseController
 
 			$data = [
 				'total_del' => $Delegates->whereNotIn('ref',['m'])->countAllResults(),
-				'remo' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Remo')->countAllResults(),
-				'egba' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Egba')->countAllResults(),
-				'ijebu' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Ijebu')->countAllResults(),
-				'aoo' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Adoodo')->countAllResults(),
+				'ife' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Ife|Olode')->countAllResults(),
+				'ilesha' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Ilesha')->countAllResults(),
+				'osogbo' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Osogbo|Ede')->countAllResults(),
+				'ikirun' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Ikirun|Ila|Okuku')->countAllResults(),
+				'iwo' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Iwo')->countAllResults(),
+				'akure' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Akure|Owena|Ekiti')->countAllResults(),
 				'others' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'others')->countAllResults(),
 				'male' => $Delegates->whereNotIn('ref',['m'])->where('gender', 'male')->countAllResults(),
 				'female' => $Delegates->whereNotIn('ref',['m'])->where('gender', 'female')->countAllResults(),
-				'psec' => $Delegates->whereNotIn('ref',['m'])->where('category', 'primary')->countAllResults(),
-				'jsec' => $Delegates->whereNotIn('ref',['m'])->where('category', 'jsec')->countAllResults(),
-				'ssec' => $Delegates->whereNotIn('ref',['m'])->where('category', 'ssec')->countAllResults(),
-				'hi' => $Delegates->whereNotIn('ref',['m'])->where('category', 'hi')->countAllResults(),
-				'workers' => $Delegates->whereNotIn('ref',['m'])->where('category', 'Workers')->countAllResults(),
-				'sch_leaver' => $Delegates->whereNotIn('ref',['m'])->where('category', 'sch_leaver')->countAllResults(),
-				'manual' => [
-					'total_del' => $Delegates->where('ref', 'm')->countAllResults(),
-					'remo' => $Delegates->where(['ref'=>'m','lb'=>'Remo'])->countAllResults(),
-					'egba' => $Delegates->where(['ref'=>'m','lb'=>'Egba'])->countAllResults(),
-					'ijebu' => $Delegates->where(['ref'=>'m','lb'=>'Ijebu'])->countAllResults(),
-					'aoo' => $Delegates->where(['ref'=>'m','lb'=>'Adoodo'])->countAllResults(),
-					'others' => $Delegates->where(['ref'=>'m','lb'=>'others'])->countAllResults(),
-                    'male' => $Delegates->where(['ref'=>'m','gender'=>'male'])->countAllResults(),
-					'female' => $Delegates->where(['ref'=>'m','gender'=>'female'])->countAllResults(),
-                    'psec' => $Delegates->where(['ref'=>'m','category'=>'primary'])->countAllResults(),
-                    'jsec' => $Delegates->where(['ref'=>'m','category'=>'jsec'])->countAllResults(),
-                    'ssec' => $Delegates->where(['ref'=>'m','category'=>'ssec'])->countAllResults(),
-                    'hi' => $Delegates->where(['ref'=>'m','category'=>'hi'])->countAllResults(),
-                    'workers' => $Delegates->where(['ref'=>'m','category'=>'Workers'])->countAllResults(),
-					'sch_leaver' => $Delegates->where(['ref'=>'m','category'=>'sch_leaver'])->countAllResults(),
-				]
+				'ssec' => $Delegates->whereNotIn('ref',['m'])->where('category', 'Secondary School')->countAllResults(),
+				'hi' => $Delegates->whereNotIn('ref',['m'])->where('category', 'Undergraduate')->countAllResults(),
+				'workers' => $Delegates->whereNotIn('ref',['m'])->where('category', 'Workers/Others')->countAllResults(),
+				'sch_leaver' => $Delegates->whereNotIn('ref',['m'])->where('category', 'School Leaver')->countAllResults()
 			];
 
 			echo view('stat/header');

@@ -34,13 +34,15 @@
                     <input type="text" name="lname" id="lname" class="form-control" placeholder="" required aria-describedby="Last name">
                 </div>
                 <div class="mb-3">
-                    <label for="lb" class="form-label">Local Branch</label>
+                    <label for="lb" class="form-label">Zone</label>
                     <select name="lb" id="lb" required>
-                        <option value="">Select a Local Branch</option>
-                        <option value="Egba">Egba</option>
-                        <option value="Remo">Remo</option>
-                        <option value="Ijebu">Ijebu</option>
-                        <option value="Adoodo">Ado-Odo</option>
+                        <option value="">Select a Zone</option>
+                        <option value="Ife|Olode">Ife|Olode</option>
+                        <option value="Ilesha">Ilesha</option>
+                        <option value="Osogbo|Ede">Osogbo|Ede</option>
+                        <option value="Ikirun|Ila|Okuku">Ikirun|Ila|Okuku</option>
+                        <option value="Iwo">Iwo</option>
+                        <option value="Akure|Owena|Ekiti">Akure|Owena|Ekiti</option>
                         <option value="others">Others</option>
                     </select>
                 </div>
@@ -76,7 +78,7 @@
         <div class="fieldset" id="three">
             <fieldset class="d-none" style="margin-bottom: 1rem; border-width: 0px;">
                 <h4>Work/School Details</h4>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="org" class="form-label">Which Islamic org. do you belong to?</label>
                     <select name="org" id="org" required>
                         <option value="">Choose an Organisation</option>
@@ -88,7 +90,7 @@
                         <option value="tmc">TMC</option>
                         <option value="others">Others</option>
                     </select>
-                </div>
+                </div> -->
                 <!-- <div class="mb-3">
                     <label for="category" class="form-label">Category: </label>
                     <input type="hidden"  name="category" value="" >
@@ -98,12 +100,10 @@
                     <label for="category" class="form-label">Category</label>
                     <select name="category" id="category" required >
                         <option value="">Select a Category</option>
-                        <option class="catg" value="primary">Primary School</option>
-                        <option class="catg" value="jsec">Junior Secondary</option>
-                        <option class="catg" value="ssec">Senior Secondary</option>
-                        <option class="catg" value="sch_leaver">School Leaver</option>
-                        <option class="catg" value="hi">Higher Institution</option>
-                        <option class="catg" value="Workers">Worker</option>
+                        <option class="catg" value="Secondary School">Secondary School</option>
+                        <option class="catg" value="School Leaver">School Leaver</option>
+                        <option class="catg" value="Undergraduate">Undergraduate</option>
+                        <option class="catg" value="Workers/Others">Workers/Others</option>
                     </select>
                 </div>
                 <div class="mb-3">
