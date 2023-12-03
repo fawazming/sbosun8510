@@ -48,6 +48,9 @@
         function ab($val){
             return strtoupper(substr($val,0,1));
         }
+        function ab1($val){
+            return strtoupper(substr($val,0,2));
+        }
         function ib($val){
             if ($val > 0 && $val < 10) {
                 return '00'.$val;
@@ -66,9 +69,9 @@
                 echo"
     <div class='card'>
         <div class='center logo'>
-            <img src='assets/logo.png' alt='' width='50mm'>
-            <h2 class='m-0'>PMC '22</h2>
-            <small>https://camp.phfogun.org.ng</small>
+            <img src='https://camp.sbosun.org.ng/assets/logo.png' alt='' width='50mm'>
+            <h2 class='m-0'>HIC '23</h2>
+            <small>https://camp.sbosun.org.ng</small>
         </div>
         <br>
         <div class='m-0'>
@@ -77,7 +80,7 @@
         </div>
          <br>
         <div class='m-0'>
-            <p class='m-0'>Local Branch:</p>
+            <p class='m-0'>Zone:</p>
             <h4 class='m-0'>".$de[0]['lb']."</h4>
         </div>
         <br>
@@ -88,8 +91,8 @@
         <br>
 
         <div class='center logo mt-1'>
-            <h1 style='font-family: consolas;' class='m-0'>PHF".ab($de[0]['lb']).ab($de[0]['gender']).ib($de[0]['id'])."</h1>
-            <small style='font-size: 0.6rem;'>...returning to Allah with PURE HEART</small>
+            <h1 style='font-family: consolas;' class='m-0'>HIC".ab1($de[0]['lb']).ab($de[0]['gender']).ib($de[0]['id'])."</h1>
+            <!--<small style='font-size: 0.6rem;'>...returning to Allah with PURE HEART</small>-->
         </div>
     </div>
 
@@ -99,9 +102,9 @@
                 echo "
     <div class='card'>
         <div class='center logo'>
-            <img src='assets/logo.png' alt='' width='50mm'>
-            <h2 class='m-0'>PMC '22</h2>
-            <small>https://camp.phfogun.org.ng</small>
+            <img src='https://camp.sbosun.org.ng/assets/logo.png' alt='' width='50mm'>
+            <h2 class='m-0'>HIC '23</h2>
+            <small>https://camp.sbosun.org.ng</small>
         </div>
         <br>
         <div class='m-0'>
@@ -121,8 +124,7 @@
         <br>
 
         <div class='center logo mt-1'>
-            <h1 style='font-family: consolas;' class='m-0'>PHF".ab($de[0]['lb']).ab($de[0]['gender']).ib($de[0]['id'])."</h1>
-            <small style='font-size: 0.6rem;'>...returning to Allah with PURE HEART</small>
+            <h1 style='font-family: consolas;' class='m-0'>HIC".ab1($de[0]['lb']).ab($de[0]['gender']).ib($de[0]['id'])."</h1>
         </div>
     </div>
 
