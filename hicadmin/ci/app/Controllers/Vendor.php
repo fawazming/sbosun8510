@@ -249,6 +249,25 @@ class Vendor extends BaseController
 
 	public function calibrate()
 	{
+		// $logged_in = session()->get('vendor_logged_in');
+		// if ($logged_in) {
+		// 	$Pins = new \App\Models\Pins();
+		// 	$Delegates = new \App\Models\Delegates();
+
+		// 	$allPined = $Delegates->findAll();
+		// 	$allPins = $Pins->findAll();
+		// 	foreach ($allPined as $key => $alp) {
+		// 		// $Pins->where('pin',$alp['ref'])->update(['used' => 'yes']);
+		// 		var_dump($alp);
+		// 		$pinID = $Pins->where('pin',$alp['ref'])->find()[0]['id'];
+		// 		var_dump($pinID);
+		// 		$Pins->update($pinID,['used' => 'yes']);
+		// 	}
+		// 	return redirect()->back();
+		// } else {
+		// 	echo view('vendor/login');
+		// }
+
 		$logged_in = session()->get('vendor_logged_in');
 		if ($logged_in) {
 			$Pins = new \App\Models\Pins();
@@ -261,7 +280,7 @@ class Vendor extends BaseController
 				var_dump($alp);
 				$pinID = $Pins->where('pin',$alp['ref'])->find()[0]['id'];
 				var_dump($pinID);
-				$Pins->update($pinID,['used' => 'yes']);
+				$Pins->update($pinID,['used' => '1']);
 			}
 			return redirect()->back();
 		} else {
@@ -373,14 +392,15 @@ class Vendor extends BaseController
 
     public function samp()
     {
-    	 $Pins = new \App\Models\Pins();
 
-        for ($i=1; $i <= 2000; $i++) {
-            $p = strtoupper($this->uniqidReal(8));
-            echo ($i.' '.$p.'<br>');
-            $id = $Pins->insert(['pin'=> $p, 'used'=>0,'vendor'=>'new','sold'=>0,'worth'=>'0']);
+    	//  $Pins = new \App\Models\Pins();
 
-        }
+        // for ($i=1; $i <= 2000; $i++) {
+        //     $p = strtoupper($this->uniqidReal(8));
+        //     echo ($i.' '.$p.'<br>');
+        //     $id = $Pins->insert(['pin'=> $p, 'used'=>0,'vendor'=>'new','sold'=>0,'worth'=>'0']);
+
+        // }
     }
 
     // https://opensheet.elk.sh/1YD3D_WsBJxO6r91A9QPWK-C1GZWkUuElziA0Z1vRAZM/pmca
