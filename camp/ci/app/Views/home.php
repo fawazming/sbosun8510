@@ -1,17 +1,22 @@
         <?php 
-          // if(isset($catg)){}
-          // else{
-          //   $catg = '';
-          //   if($pinworth == '6500' || $pinworth == '8500'){
-          //       $catg = 'Post/Secondary_Sch_Student';
-          //   }elseif ($pinworth == '7500' || $pinworth == '10000'){
-          //       $catg = 'Undergraduate';
-          //   }elseif ($pinworth == '9500' || $pinworth == '12000'){
-          //       $catg = 'Working_Class';
-          //   }else{
-          //       $catg = 'Invalid Category';
-          //   }
-          // }
+          if(isset($catg)){}
+          else{
+            $catg = '';
+            if($pinworth == '6000'){
+                $catg = " <option class='catg' value='Secondary School'>Secondary School</option>
+                        <option class='catg' value='School Leaver'>School Leaver</option>
+                        <option class='catg' value='Undergraduate'>Undergraduate</option>
+                        <option class='catg' value='Workers/Others'>Workers/Others</option>";
+            }elseif ($pinworth == '7000'){
+                $catg = " <option class='catg' value='Secondary School'>Secondary School</option>
+                        <option class='catg' value='School Leaver'>School Leaver</option>";
+            }elseif ($pinworth == '8000'){
+                $catg = "<option class='catg' value='Undergraduate'>Undergraduate</option>
+                        <option class='catg' value='Workers/Others'>Workers/Others</option>";
+            }else{
+                $catg = "<option class='catg' value=''>NILL INVALID PIN</option>";
+            }
+          }
         ?>
         <div class="progress-container">
             <div class="progress" id="progress"></div>
@@ -100,10 +105,7 @@
                     <label for="category" class="form-label">Category</label>
                     <select name="category" id="category" required >
                         <option value="">Select a Category</option>
-                        <option class="catg" value="Secondary School">Secondary School</option>
-                        <option class="catg" value="School Leaver">School Leaver</option>
-                        <option class="catg" value="Undergraduate">Undergraduate</option>
-                        <option class="catg" value="Workers/Others">Workers/Others</option>
+                        <?=$catg?>
                     </select>
                 </div>
                 <div class="mb-3">
