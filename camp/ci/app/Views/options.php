@@ -15,7 +15,7 @@
             <p>Our focus remains on developing students knowledge, skills, and moral and civic values through training within the realm of Islamic values. We have lots of competent personnel using 21st-century skills and technology to impact knowledge, thereby contributing positively to human development while solving future challenges.</p>
             <p>Kindly buy a pin to complete your registration for the Camp.</p>
             <p>Early Bird: Secondary School ₦6000 ||  Other ₦6000</p>
-            <p>Late Registration: Secondary School ₦7000 || Others ₦8,000</p>
+            <p>Late Registration: Secondary School ₦8000 || Others ₦8,500</p>
         </div>
         <h5><br></h5>
 
