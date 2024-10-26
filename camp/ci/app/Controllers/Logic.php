@@ -181,8 +181,17 @@ class Logic extends BaseController
 		
 	public function samp()
 	{
-        echo ($this->generateHouse('female'));
+        // echo ($this->generateHouse('female'));
         // echo ($this->uniqidReal(16));
+
+        //    	 $Pins = new \App\Models\Pins();
+
+        // for ($i=1; $i <= 2000; $i++) {
+        //     $p = strtoupper($this->uniqidReal(6));
+        //     echo ($i.' '.$p.'<br>');
+        //     $id = $Pins->insert(['pin'=> $p, 'used'=>0,'vendor'=>'new','sold'=>0,'worth'=>'0']);
+
+        // }
 
 	}
 
