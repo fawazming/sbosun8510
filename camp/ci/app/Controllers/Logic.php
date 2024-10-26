@@ -140,7 +140,7 @@ class Logic extends BaseController
     public function generateHouse($gender)
     {
         $mHouses = ['Abu Bakr', 'Umar', 'Uthman', 'Alli'];
-        $fHouses = ['Khadijah', 'Aishah', 'Ummu Khultum', 'Ummu Salma'];
+        $fHouses = ['Khadijah', 'Aishah', 'Ummu Khultum', 'Ummu Salama'];
         if($gender=='male'){
             $key = array_rand($mHouses);
             return $mHouses[$key];

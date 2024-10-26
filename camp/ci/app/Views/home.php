@@ -7,10 +7,10 @@
                         <option class='catg' value='School Leaver'>School Leaver</option>
                         <option class='catg' value='Undergraduate'>Undergraduate</option>
                         <option class='catg' value='Workers/Others'>Workers/Others</option>";
-            }elseif ($pinworth == '7000'){
+            }elseif ($pinworth == '8000'){
                 $catg = " <option class='catg' value='Secondary School'>Secondary School</option>
                         <option class='catg' value='School Leaver'>School Leaver</option>";
-            }elseif ($pinworth == '8000'){
+            }elseif ($pinworth == '8500'){
                 $catg = "<option class='catg' value='Undergraduate'>Undergraduate</option>
                         <option class='catg' value='Workers/Others'>Workers/Others</option>";
             }else{
