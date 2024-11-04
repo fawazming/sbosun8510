@@ -45,18 +45,14 @@
                         <option value="Ife|Olode">Ife|Olode</option>
                         <option value="Ilesha">Ilesha</option>
                         <option value="Osogbo|Ede">Osogbo|Ede</option>
-                        <option value="Ikirun|Ila|Okuku">Ikirun|Ila|Okuku</option>
-                        <option value="Iwo">Iwo</option>
-                        <option value="Akure|Owena|Ekiti">Akure|Owena|Ekiti</option>
+                        <option value="Ede">Ede</option>
+                        <option value="Ikirun|Ila|Inisa|Okuku">Ikirun|Ila|Inusa|Okuku</option>
+                        <option value="Iwo|Ejigbo">Iwo|Ejigbo</option>
+                        <option value="Akure|Owena">Akure|Owena</option>
+                        <option value="Ekiti">Ekiti</option>
                         <option value="others">Others</option>
                     </select>
                 </div>
-                <!-- <div class="text-center form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" name="lcamp" id="lcamp">
-                      <label class="form-check-label" for="lcamp">
-                        I attended last December camp at RSS, Sagamu
-                      </label>
-                </div> -->
             </fieldset>
         </div>
         <div class="fieldset" id="two">
