@@ -19,10 +19,11 @@
 							<th>ID</th>
 							<th>Surname</th>
 							<th>Name</th>
-							<th>Phone</th>
-							<th>Sex</th>
+							<th>Paid</th>
+							<th>Gender</th>
 							<th>Category</th>
 							<th>Zone</th>
+							<th>Phone</th>
 							<th>Pin</th>
 						</tr>
 					</thead>
@@ -32,11 +33,12 @@
 							<td><?=$delegate['id']?></td>
 							<td><a href="javascript:;"><?=$delegate['lname']?></a></td>
 							<td><?=$delegate['fname']?></td>
-							<td><?=$delegate['phone']?></td>
+							<td><?=$delegate['worth']?></td>
 							<!-- <td><span class="badge badge-success badge-pill">Shipped</span></td> -->
 							<td><?=$delegate['gender']?></td>
 							<td><?=$delegate['category']?></td>
 							<td><?=$delegate['lb']?></td>
+							<td><?=$delegate['phone']?></td>
 							<td><?=empty($delegate['ref'])?$delegate['tag']:$delegate['ref']?></td>
 						</tr>
 						<?php endforeach; ?>

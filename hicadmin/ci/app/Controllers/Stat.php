@@ -65,9 +65,11 @@ class Stat extends BaseController
 				'ife' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Ife|Olode')->countAllResults(),
 				'ilesha' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Ilesha')->countAllResults(),
 				'osogbo' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Osogbo|Ede')->countAllResults(),
-				'ikirun' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Ikirun|Ila|Okuku')->countAllResults(),
-				'iwo' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Iwo')->countAllResults(),
-				'akure' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Akure|Owena|Ekiti')->countAllResults(),
+				'ede' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Ede')->countAllResults(),
+				'ikirun' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Ikirun|Ila|Inisa|Okuku')->countAllResults(),
+				'iwo' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Iwo|Ejigbo')->countAllResults(),
+				'akure' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Akure|Owena')->countAllResults(),
+				'ekiti' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'Ekiti')->countAllResults(),
 				'others' => $Delegates->whereNotIn('ref',['m'])->where('lb', 'others')->countAllResults(),
 				'male' => $Delegates->whereNotIn('ref',['m'])->where('gender', 'male')->countAllResults(),
 				'female' => $Delegates->whereNotIn('ref',['m'])->where('gender', 'female')->countAllResults(),
@@ -134,12 +136,15 @@ class Stat extends BaseController
 			$year = session()->get('year');
 			if($year == 'current'){
 				$Delegates = new \App\Models\Delegates();
+				$record = $Delegates->join('pins_24', 'pin = ref')->findAll();
 			}else{
 				$Delegates = new \App\Models\DelegatesOld();
+				$record = $Delegates->join('pins_23', 'pin = ref')->findAll();
 			}
 			
 			$data = array(
-				'delegates' => $Delegates->findAll(),
+				// 'delegates' => $Delegates->findAll(),
+				'delegates' => $record,
 				'type' => 'Electronic'
 			);
 

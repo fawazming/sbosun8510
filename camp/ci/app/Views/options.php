@@ -9,7 +9,7 @@
 
         <div class="content" style="background-color:rgba(254, 253, 252, 0.9); font-size: 1.9rem; text-align: left; border-radius: 10px; padding-left: 20px;">
             <p>Assalamualaykum</p>
-            <p>You are Welcome to Standard Bearers Islamic Organizations Osun State(SBOSUN) Registration Portal For Holiday Islamic Course  (HIC)2023!</p>
+            <p>You are Welcome to Standard Bearers Islamic Organizations Osun State(SBOSUN) Registration Portal For Holiday Islamic Course  (HIC)2024!</p>
 
             <p>The above-named organization is a non-profit, formidable and religious organization recognized by the Federal Government registered CAC, as a Non-Governmental Organization.</p>
             <p>Our focus remains on developing students knowledge, skills, and moral and civic values through training within the realm of Islamic values. We have lots of competent personnel using 21st-century skills and technology to impact knowledge, thereby contributing positively to human development while solving future challenges.</p>
