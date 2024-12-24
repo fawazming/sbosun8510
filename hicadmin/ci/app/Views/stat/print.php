@@ -22,6 +22,7 @@
 							<th>Paid</th>
 							<th>House</th>
 							<th>Category</th>
+							<th>School</th>
 							<th>Zone</th>
 							<th>Phone</th>
 							<th>Gender</th>
@@ -38,6 +39,7 @@
 							<!-- <td><span class="badge badge-success badge-pill">Shipped</span></td> -->
 							<td><?=$delegate['house']?></td>
 							<td><?=$delegate['category']?></td>
+							<td><?=$delegate['school']?></td>
 							<td><?=$delegate['lb']?></td>
 							<td><?=$delegate['phone']?></td>
 							<td><?=$delegate['gender']?></td>

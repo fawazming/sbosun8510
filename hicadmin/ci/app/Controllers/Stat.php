@@ -136,6 +136,7 @@ class Stat extends BaseController
 			$year = session()->get('year');
 			if($year == 'current'){
 				$Delegates = new \App\Models\Delegates();
+				// $record = $Delegates->findAll();
 				$record = $Delegates->join('pins_24', 'pin = ref')->findAll();
 			}else{
 				$Delegates = new \App\Models\DelegatesOld();
