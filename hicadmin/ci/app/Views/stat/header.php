@@ -79,6 +79,8 @@
 					</li> -->
 					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('stat/printe') ?>">Electronic Printer</a>
 					</li>
+					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('stat/stats') ?>">Detailed Statistics</a>
+					</li>
 					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('stat/manual') ?>">Manual Upload</a>
 					</li>
 				</ul>

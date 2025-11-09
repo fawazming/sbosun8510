@@ -40,6 +40,7 @@ $routes->group('stat', static function ($routes) {
     $routes->get('/manual1', 'Stat::manual1');
     $routes->post('/manual2', 'Stat::manual2');
     $routes->get('/logout', 'Stat::logout');
+    $routes->get('/stats', 'Stat::stats');
     $routes->get('/cert/(:any)', 'Stat::cert/$1');
 });
 

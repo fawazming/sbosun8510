@@ -19,7 +19,6 @@
 							<th>ID</th>
 							<th>Surname</th>
 							<th>Name</th>
-							<th>Paid</th>
 							<th>House</th>
 							<th>Category</th>
 							<th>School</th>
@@ -35,7 +34,6 @@
 							<td><?=$delegate['id']?></td>
 							<td><a href="javascript:;"><?=$delegate['lname']?></a></td>
 							<td><?=$delegate['fname']?></td>
-							<td><?=$delegate['worth']?></td>
 							<!-- <td><span class="badge badge-success badge-pill">Shipped</span></td> -->
 							<td><?=$delegate['house']?></td>
 							<td><?=$delegate['category']?></td>
@@ -43,7 +41,8 @@
 							<td><?=$delegate['lb']?></td>
 							<td><?=$delegate['phone']?></td>
 							<td><?=$delegate['gender']?></td>
-							<td><?=empty($delegate['ref'])?$delegate['tag']:$delegate['ref']?></td>
+							<td><?=isset($delegate['txn'])?$delegate['txn']:$delegate['ref']?></td>
+
 						</tr>
 						<?php endforeach; ?>
 					</tbody>
