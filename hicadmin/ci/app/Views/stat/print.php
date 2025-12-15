@@ -24,6 +24,7 @@
 							<th>School</th>
 							<th>Zone</th>
 							<th>Phone</th>
+							<th>Email</th>
 							<th>Gender</th>
 							<th>Pin</th>
 						</tr>
@@ -32,7 +33,7 @@
 						<?php foreach ($delegates as $key => $delegate): ?>
 						<tr>
 							<td><?=$delegate['id']?></td>
-							<td><a href="javascript:;"><?=$delegate['lname']?></a></td>
+							<td><a href="<?=base_url('stat/editDel/'.$delegate['id'])?>"><?=$delegate['lname']?></a></td>
 							<td><?=$delegate['fname']?></td>
 							<!-- <td><span class="badge badge-success badge-pill">Shipped</span></td> -->
 							<td><?=$delegate['house']?></td>
@@ -40,6 +41,7 @@
 							<td><?=$delegate['school']?></td>
 							<td><?=$delegate['lb']?></td>
 							<td><?=$delegate['phone']?></td>
+							<td><?=$delegate['email']?></td>
 							<td><?=$delegate['gender']?></td>
 							<td><?=isset($delegate['txn'])?$delegate['txn']:$delegate['ref']?></td>
 

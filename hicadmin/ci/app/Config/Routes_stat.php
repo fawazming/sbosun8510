@@ -32,6 +32,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Home::dashboard');
+    $routes->get('/editdelegate/(:any)', 'Stat::editDel/$1');
+
 $routes->get('/printe', 'Home::printe');
 $routes->get('/printm', 'Home::printm');
 $routes->post('/auth', 'Home::auth');

@@ -220,6 +220,65 @@ class Stat extends BaseController
 		}
 	}
 
+    public function editDel($id)
+    {
+        $logged_in = session()->get('admin_logged_in');
+		if ($logged_in) {
+			$year = session()->get('year');
+			if($year == 'current'){
+				$Delegates = new \App\Models\Delegates();
+			}else{
+				$Delegates = new \App\Models\DelegatesOld();
+			}
+			
+			$data = array(
+				'delegate' => $Delegates->find($id)
+			);
+
+			// var_dump($data);
+
+			echo view('stat/header');
+			echo view('stat/editDelegate', $data);
+			echo view('stat/footer');
+		} else {
+			echo view('stat/login');
+		}
+    }
+
+    public function updatedel()
+    {
+        $logged_in = session()->get('admin_logged_in');
+		if ($logged_in) {
+			$year = session()->get('year');
+			if($year == 'current'){
+				$Delegates = new \App\Models\Delegates();
+			}else{
+				$Delegates = new \App\Models\DelegatesOld();
+			}
+			$incoming = $this->request->getPost();
+			$id = $incoming['id'];
+			$res= $Delegates->update($id, $incoming);
+			
+			// var_dump($res);
+			if($res){
+				$data['msg'] = "Delegate $incoming[fname] $incoming[lname] info updated successfully.";
+
+			echo view('stat/header');
+			echo view('stat/msg', $data);
+			echo view('stat/footer');
+			}else{
+				$data['msg'] = "Error updating delegate $incoming[fname] $incoming[lname] info. Please try again.";
+				echo view('stat/header');
+			echo view('stat/msg', $data);
+			echo view('stat/footer');
+			}
+		} else {
+			echo view('stat/login');
+		}
+    }
+
+
+
 	public function printm()
 	{
 		$logged_in = session()->get('admin_logged_in');
@@ -244,6 +303,7 @@ class Stat extends BaseController
         // var_dump($name);
         echo view('stat/cert', ['name'=>$name]);
     }
+
 
 	//--------------------------------------------------------------------
 

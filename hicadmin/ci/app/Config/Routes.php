@@ -33,6 +33,8 @@ $routes->setAutoRoute(true);
 $routes->group('stat', static function ($routes) {
     $routes->get('/', 'Stat::index');
     $routes->get('/dashboard', 'Stat::dashboard');
+    $routes->get('/editDel/(:any)', 'Stat::editDel/$1');
+    $routes->post('/updatedel', 'Stat::updatedel');
     $routes->get('/printe', 'Stat::printe');
     $routes->get('/printm', 'Stat::printm');
     $routes->post('/auth', 'Stat::auth');
