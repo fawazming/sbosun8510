@@ -26,6 +26,7 @@
 							<th>Phone</th>
 							<th>Email</th>
 							<th>Gender</th>
+							<th>Age</th>
 							<th>Pin</th>
 						</tr>
 					</thead>
@@ -43,6 +44,7 @@
 							<td><?=$delegate['phone']?></td>
 							<td><?=$delegate['email']?></td>
 							<td><?=$delegate['gender']?></td>
+							<td><?=$delegate['org']?></td>
 							<td><?=isset($delegate['txn'])?$delegate['txn']:$delegate['ref']?></td>
 
 						</tr>
